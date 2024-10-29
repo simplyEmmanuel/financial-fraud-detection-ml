@@ -20,7 +20,7 @@ This is a comprehensive project on detecting financial fraud using machine learn
 
   In today's digital age, financial fraud poses a significant threat to consumers and institutions, leading to substantial economic losses and erosion of trust in financial systems. With the increasing volume and complexity of digital transactions, detecting fraudulent activities has become a critical priority. Financial fraud encompasses various malicious activities, including unauthorized transactions, account takeovers, and money laundering, which can lead to severe economic repercussions. Recent reports indicate that global losses due to financial fraud amount to billions of dollars annually, underscoring the urgent need for effective fraud-detection mechanisms (ACFE, 2022; PwC, 2021).
 
-  Effective fraud detection is essential to maintaining the integrity of financial systems and protecting stakeholders. Advanced machine learning models offer promising real-time solutions for identifying fraudulent transactions, enabling financial institutions to respond swiftly and mitigate potential damages. This study leveraged a synthetic dataset generated using the PaySim simulator, mimicking mobile money transactions based on real financial logs. The dataset comprehensively represents legitimate and fraudulent transactions, making it an ideal testbed for developing and evaluating fraud detection models.
+  Effective fraud detection is essential to maintaining the integrity of financial systems and protecting stakeholders. Advanced machine learning models offer promising real-time solutions for identifying fraudulent transactions, enabling financial institutions to respond swiftly and mitigate potential damages. This study leveraged a synthetic dataset generated using the PaySim simulator, mimicking mobile money transactions based on actual financial logs. The dataset comprehensively represents legitimate and fraudulent transactions, making it an ideal testbed for developing and evaluating fraud detection models.
   
 ## Dataset
 The dataset contains:
@@ -51,11 +51,11 @@ We implemented and evaluated the following models:
 ![image](https://github.com/simplyEmmanuel/financial-fraud-detection-ml/assets/57048981/047f1c6f-6a06-4450-baac-e2c72e5b447a)
 
 `Summary of Confusion Matrices:`
-  The confusion matrices for the Logistic Regression, Random Forest, Gradient Boosting, and Naive Bayes models highlight the performance of each model in distinguishing between fraudulent and non-fraudulent transactions.
+  The confusion matrices for the Logistic Regression, Random Forest, Gradient Boosting, and Naive Bayes models highlight each model's performance in distinguishing between fraudulent and non-fraudulent transactions.
 
 - Logistic Regression shows a balanced but less effective performance with a notable number of false positives and false negatives.
 - Random Forest and Gradient Boosting outperform Logistic Regression with higher precision and recall values, indicating their robustness in detecting fraud.
-- Naive Bayes, while having a high recall for fraud, suffers from a significant number of false positives, indicating it is less reliable in this context.
+While Naive Bayes has a high recall for fraud, it suffers from a significant number of false positives, indicating it is less reliable in this context.
 
 ## Results and Discussion
   I compared the models based on accuracy, precision, recall, F1 score, and ROC AUC score. Feature selection techniques like RFE and PCA were used to improve model performance. The Random Forest and Gradient Boosting models performed best in detecting fraudulent transactions.
@@ -66,7 +66,7 @@ We implemented and evaluated the following models:
   Ensemble methods such as Random Forest and Gradient Boosting are highly effective for fraud detection. Feature selection significantly improves model interpretability and performance. However, the synthetic nature of the dataset and potential imbalances are limitations. 
 
   The feature importance plot for the Random Forest model reveals that 'amount', 'step', and 'type_TRANSFER' are the most significant features in predicting fraudulent transactions.
-'type_CASH_OUT' and 'type_PAYMENT' are given less importance, suggesting that these features have less influence on the model's predictions.
+'type_CASH_OUT' and 'type_PAYMENT' are given less importance, suggesting that these features influence the model's predictions less.
 
 ## Future Work
 Future efforts include validating models using real-world datasets, exploring advanced techniques like deep learning, and continuously updating models with new data to maintain accuracy.
